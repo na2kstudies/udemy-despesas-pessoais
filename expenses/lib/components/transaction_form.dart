@@ -15,8 +15,6 @@ class _TransactionFormState extends State<TransactionForm> {
   final valueController = TextEditingController();
 
   _submitForm() {
-    // final title = titleController.text;
-    // final value = double.tryParse(valueController.text) ?? 0;
     final title = titleController.text;
     final valueText = valueController.text.replaceAll(',', '.');
     final value = double.tryParse(valueText) ?? 0.0;
