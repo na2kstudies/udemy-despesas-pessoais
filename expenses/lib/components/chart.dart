@@ -8,7 +8,6 @@ class Chart extends StatelessWidget {
 
   const Chart(this.recentTransaction, {super.key});
 
-  // List<Map<String, Object>> get groupedTransactions {
   List<Map<String, dynamic>> get groupedTransactions {
     return List.generate(7, (index) {
       final weekDay = DateTime.now().subtract(
@@ -48,8 +47,6 @@ class Chart extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: groupedTransactions.map((tr) {
-          // return Flexible(
-          //   fit: FlexFit.tight,
           return Expanded(
             child: ChartBar(
               label: tr['day'],

@@ -52,9 +52,9 @@ class TransactionList extends StatelessWidget {
                     ),
                     title: Text(
                       tr.title,
-                      //  style: Theme.of(context).textTheme.title,
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
+                    //comentário: aqui estamos substituindo o formato para traduzir as datas para português, por isso está diferente da aula!
                     // subtitle: Text(DateFormat('d MMM y').format(tr.date)),
                     subtitle: Text(
                       DateFormat.yMMMMd('pt_BR').format(tr.date),

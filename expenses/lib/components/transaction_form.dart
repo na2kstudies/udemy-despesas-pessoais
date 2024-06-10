@@ -31,7 +31,7 @@ class _TransactionFormState extends State<TransactionForm> {
     showDatePicker(
       context: context,
       initialDate: DateTime.now(),
-      firstDate: DateTime(2019),
+      firstDate: DateTime(2024),
       lastDate: DateTime.now(),
     ).then((pickedDate) {
       if (pickedDate == null) {
@@ -89,9 +89,11 @@ class _TransactionFormState extends State<TransactionForm> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
                 ElevatedButton(
+                  //comentário 1: você pode escolher a forma que preferir, pegando da cor que setamos no nosso Theme:
                   // style: ElevatedButton.styleFrom(
                   //     foregroundColor: Colors.white,
                   //     backgroundColor: Theme.of(context).primaryColor),
+                  //comentário 2: ou setar a cor que você preferir diretamente:
                   style: ButtonStyle(
                     backgroundColor:
                         WidgetStateProperty.all<Color>(Colors.purple),
